@@ -88,9 +88,9 @@ public class MojoToReportOptionsConverter {
 
     if (this.mojo.getProject().getBuild() != null) {
       this.log.info("Mutating from "
-          + this.mojo.getProject().getBuild().getOutputDirectory());
+          + this.mojo.getProject().getBuild().getTestOutputDirectory());
       data.setCodePaths(Collections.singleton(this.mojo.getProject().getBuild()
-          .getOutputDirectory()));
+          .getTestOutputDirectory()));
     }
 
     data.setUseClasspathJar(this.mojo.isUseClasspathJar());
